@@ -1,0 +1,23 @@
+{
+  "name": "namastereact",
+  "version": "1.0.0",
+  "description": "Learning react",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pradeep-ramola/NamasteReact.git"
+  },
+  "keywords": [
+    "React",
+    "learning"
+  ],
+  "author": "Pradeep Ramola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pradeep-ramola/NamasteReact/issues"
+  },
+  "homepage": "https://github.com/pradeep-ramola/NamasteReact#readme"
+}
