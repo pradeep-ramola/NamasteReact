@@ -1,6 +1,6 @@
 # learning react and revision
 
-# Parcel
+# Parcel https://parceljs.org/getting-started/webapp/
 - Dev Build
 - Local Server
 - HMR - Hot Module Replacement [Reflects code changes on browser]
@@ -8,4 +8,8 @@
 - caching - for faster build
 - Image Optimisation 
 - Bundling (babel)
-- Compress
+- Compress  
+- Consistent Hashing
+- Differential hashing
+- Error handling 
+- Diagnostic
