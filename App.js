@@ -1,26 +1,49 @@
- 
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Header from './src/components/Header'
-import {useState} from 'react'
+import Body from './src/components/Body'
 import './App.css'
+import {createBrowserRouter, RouterProvider , Outlet} from "react-router-dom"
+import About  from './src/components/About'
+import Contact from './src/components/Contact'
+import Error from './src/components/Error'
+import RestaurantMenu from './src/components/RestaurantMenu'
+const AppLayout = () => {
+    return (
+        <>
+        <Header/>
+        <Outlet/>
+        </>
+    
+       );
 
-
+};
+const appRouter = createBrowserRouter([
+    {
+      path:"/",
+      element : <AppLayout/>,
+      children :[
+        {
+         path:'/',
+         element: <Body/>
+        },
+        {
+            path:"/about",
+            element: <About/>
+        },
+        {
+            path:"/contact",
+            element:<Contact/>
+        },
+        {
+            path:"/restaurants/:resId",
+            element:<RestaurantMenu/>
+        }
+      ],
+      errorElement:<Error/>
+    }
+    
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-const parent = "This is parent";
-const AppLayout = () => {
-    const handler = (data)=>{
-        setData(data+1);
-    }
-const [data,setData] = useState(0);
-
-return (
-    <>
-    <Header prop={parent } handle ={handler} count={data}/>
-    <p> Data : {data}</p>
-    </>
-)
-}
-
-root.render(<AppLayout/>);
+root.render(<RouterProvider router= {appRouter}/>);
