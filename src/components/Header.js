@@ -1,27 +1,26 @@
-import React, {useState} from 'react'
-const Header = (p)=>{
-    // let [count , setCount]= useState(0);
-    console.log(p);
-    
-    return (
-        <>        
-        <h1 id="heading">Heading {p.prop}</h1>
-        {/* /*
-         <button onClick={()=>{
-            p.handle(count++)
-            setCount(count);
-            }}> Click this button to change prop data </button>*/ }
-            <button onClick={()=>{
-            p.handle(p.count++)
-            
-            }}> Click this button to change prop data </button>
-        <div > 
-          <li>Home</li>
-          <li>Contact</li>
-          <li>About</li>
-          <li>Menu</li>
-        </div></>
+import {Link } from "react-router-dom"
+const Header = ()=>{
 
+    return (
+        <>     
+        <div className="header">
+            <div className="logo-container">
+                <img className="logo" 
+                src="https://img.freepik.com/free-vector/delivery-service-illustrated_23-2148505081.jpg?w=740&t=st=1706776362~exp=1706776962~hmac=dc5653f747ca5e63a163a4fcc1a0d136f47322bb6c9e63bf9cd102ea8bad1418"/>
+
+            </div>
+        <div className="nav-items"> 
+        <ul>
+        <li><Link>Home</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link>Menu</Link></li>
+        </ul>
+        </div>
+        </div>   
+      
+        </>
+ 
     )
 }
 
